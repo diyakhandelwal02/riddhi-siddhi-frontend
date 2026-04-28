@@ -1,0 +1,165 @@
+.distribution-section{
+  background: linear-gradient(
+    to bottom,
+    #FFED00 0%,
+    #FFED00 50%,
+    #ffffff 50%,
+    #ffffff 100%
+  );
+}
+
+/* Container */
+.distribution-container {         
+  padding: 50px;              
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Heading */
+.distribution-top {
+  text-align: center;
+padding-top: 40px;
+}
+
+.distribution-top h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #1A1A1A;
+}
+
+.distribution-top p {
+  font-size: 17px;
+  color: #1A1A1A;
+  max-width: 550px;
+  margin: 0 auto;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+/* Cards */
+.distribution-bottom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px; 
+}
+
+/* Card */
+.card {
+  width: 250px;
+  max-width: 100%;
+  height: 300px;
+  border: 1px solid #1A1A1A33;
+  border-radius: 5px;
+   border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border: 1px solid #C02224;
+}
+
+/* Image */
+.card-img {
+  width: 100%;
+  height: 250px;
+ 
+}
+
+.card-img img {
+  width: 100%;
+height: 100%;
+  object-fit: cover; 
+   border-radius: 5px;
+}
+
+/* Text */
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Button */
+.distribution-btn{
+  display: block;
+  margin: 50px auto 0;  
+  text-align: center;
+  padding: 12px 24px;
+  width: 130px;
+  height: 40px;
+  background: #C02224;  
+  color: #FFED00;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.distribution-btn:hover{
+  background: #a61b1b;
+  transform: translateY(-2px);
+}
+
+/* swiper base fix */
+.swiper {
+  width: 100%;
+}
+
+/* mobile fix */
+@media (min-width: 320px) and (  max-width: 768px) {
+
+  .distribution-bottom {
+    display: block;
+  }
+
+  .swiper {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 260px;
+    height: auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1160px) {
+  .distribution-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+   .card {
+    height: 250px;  
+  }
+
+  .card-img {
+    width: auto;
+    height: 195px;  
+  }
+
+}

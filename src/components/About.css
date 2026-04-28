@@ -1,0 +1,206 @@
+
+.About-Container {
+  width: 100%;
+  height: auto;
+  padding: 100px 20px;
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.About-section {
+  max-width: 1200px;     
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.About-Container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 550px;
+  height: 500px;
+  background: #f6e600;
+  z-index: 0;
+}
+
+.about-image {
+  position: relative;
+  z-index: 2;
+}
+
+.about-image img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+/* beige box behind image */
+.about-image::after {
+  content: "";
+  position: absolute;
+  width: 61px;
+  height: 250px; 
+  background: #D7B56D;
+  bottom: 4px;
+  left: -20px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  z-index: 1;
+}
+
+.about-text-container{
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* text right */
+.about-text{
+flex:1;
+font-size:20px;
+font-weight: 400;
+line-height: 30px;
+font-style: normal;
+letter-spacing: 0%;
+color:#1A1A1A;
+gap: 40px;
+}
+
+.about-text h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+.about-text p {
+   text-align: justify;
+  text-justify: inter-word;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1A1A1A;
+}
+
+.mission-conatiner{
+  width: 100%;
+}
+
+.mission-title{
+  margin-top: 8px;
+  margin-bottom: 13px;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.mission-list{
+  font-weight: 500;
+ font-size: 16px;
+  letter-spacing: 0;
+  line-height: 30px;
+  list-style: none;
+}
+.mission-list li {
+  display: flex;
+  align-items: flex-start; /* 👈 yaha change */
+  gap: 10px;
+}
+
+.tick-icon {
+  width: 18px;
+  height: 18px;
+  margin-top: 7px; /* 👈 thoda niche adjust */
+}
+
+.about-btn{
+  align-self: flex-start; /* left align */
+ padding: 12px 24px;
+  border: none;
+  width: 130px;
+  height: 40px;
+  background: #C02224;   /* bright red */
+  color: #FFED00;
+  border-radius: 15px;
+  font-style: medium;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+.about-btn:hover {
+   background: #a61b1b;
+  transform: translateY(-2px);
+}
+
+ @media (max-width: 1130px) and (min-width: 992px) {
+  .About-Container::before {
+    width: 400px; /* 👈 reduce */
+    height: 450px;
+  }
+
+  .About-section {
+    gap: 30px; /* 👈 thoda space do */
+  }
+}
+
+@media (max-width: 992px) {
+  .About-section {
+    flex-direction: column;
+  }
+  
+}
+  @media (max-width: 768px) {
+
+  .about-image img{
+    width: 500px;
+    height: 420px;
+  }
+  
+  .about-image::after {
+    display: none;
+  }
+
+  .About-Container::before {
+  /* width: 250px; */
+  height: 380px;
+}
+
+}
+
+@media (max-width: 480px){
+
+  .about-image img{
+    width: 280px;
+    height: 380px;
+  }
+  
+  .about-image::after {
+    display: none;
+  }
+
+  .About-Container::before {
+  height: 300px;
+}
+  .about-text-container {
+    width: 100%;
+    max-width: 320px; /* ya 90% bhi rakh sakti ho */
+    margin: 0 auto;   /* center */
+    padding: 0 10px;  /* 👈 left-right space */
+  }
+
+  
+}
+
+

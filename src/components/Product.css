@@ -1,0 +1,120 @@
+.products-section {
+  padding: 15px 20px 60px;
+  background-color: white;
+}
+
+/* heading */
+.products-heading {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.products-heading h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #2d2d2d;
+}
+
+.products-heading p {
+  font-size: 15px;
+  color: #1A1A1A;
+  max-width: 480px;
+  opacity: 0.8;
+  margin: 10px auto 50px;
+}
+
+/* container */
+.products-container {
+  max-width: 1000px;
+  margin: auto;
+  position: relative; /* 🔥 important */
+}
+
+/* center cards */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* 🔥 Custom arrows */
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+
+  background: #C02224;
+  color: #FFED00;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* left right */
+.custom-prev {
+  left: 4px;
+}
+
+.custom-next {
+  right: 4px;
+}
+
+/* icon size */
+.custom-prev svg,
+.custom-next svg {
+  font-size: 30px;
+}
+
+/* arrows hover */
+.custom-prev:hover,
+.custom-next:hover {
+  background: #a51d1f;
+  transform: translateY(-50%) scale(1.1);
+  transition: 0.3s;
+}
+
+.card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* desktop */
+.desktop-slider {
+  display: block;
+}
+
+.mobile-grid {
+  display: none;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+  .desktop-slider {
+    display: none !important;
+  }
+
+  .custom-prev,
+  .custom-next {
+    display: none !important;
+  }
+
+  .mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mobile-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,146 @@
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   
+  padding: 0 240px;
+ background-color: white;
+  /* backdrop-filter: blur(8px);     */
+  box-shadow: none;
+  box-sizing: border-box;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Navbar scroll effect */
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.40);
+  backdrop-filter: blur(15px);
+}
+
+/* Logo */
+.navbar img {
+  height: 60px;
+  width: 119px;
+  object-fit: contain;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px ;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: #1A1A1A;
+  text-shadow: 1px 1px 2px rgba; 
+}
+
+.nav-links li {
+  cursor: pointer;
+  position: relative;
+}
+.nav-links li:hover{
+  color: #C02224;
+}
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #FFED00; /* red underline */
+  transition: 0.3s ease;
+}
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+/* Order button */
+.order-btn {
+  padding: 12px 24px;
+  border: none;
+  width: 150px;
+  height: 45px;
+  background: #C02224;   /* bright red */
+  color: #FFED00;
+  border-radius: 20px;
+  font-style: medium;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.order-btn:hover {
+  background: #C02224;
+  transform: translateY(-2px);
+}
+
+
+/* Responsive: small screens */
+@media (max-width: 768px) {
+
+  .navbar {
+   padding-left: 4px; 
+    padding-right: 10px;
+    height: 70px;
+  }
+
+  /* 👇 nav links dropdown ban jayega */
+  .nav-links {
+    position: absolute;
+    top: 50px;
+    left: 80%;
+    transform: translateX(-50%); 
+    width: 30%; 
+    max-width: 300px;
+    color: #FFED00;
+    background: #C02224;
+    border: 2px solid rgb(89, 89, 97);
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* 👇 hamburger show hoga */
+  .menu-icon {
+    display: block;
+  }
+
+  /* 👇 button hide (optional but recommended) */
+  .order-btn {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar {
+    padding: 0 40px;
+  }
+}
+
+
+
+

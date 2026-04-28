@@ -1,0 +1,105 @@
+.commitment-section {
+  padding: 70px 0;
+  background-color: #fff;
+}
+
+/* Main container */
+.commitment-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Left Image */
+.main-img {
+  width: 40%;
+  height: 230px;
+  border-radius: 10px;
+  object-fit: cover;
+
+  position: relative;
+  z-index: 1;
+}
+
+.bg-style {
+  position: absolute;
+  left: 5%;   /* instead of fixed px */
+  top: -30px;
+  height: 300px;
+  z-index: 0;
+}
+/* Right Text */
+.commitment-text {
+  width: 45%;
+}
+
+.commitment-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 20px;
+}
+
+.commitment-text p {
+  font-size: 16px;
+  color: #1A1A1A;
+  line-height: 1.6;
+
+}
+
+@media (max-width: 768px) {
+
+  .commitment-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .main-img {
+    width: 90%;
+    height: 300px;
+  }
+
+  .commitment-text {
+    width: 100%;
+    text-align: left;
+  }
+
+  .commitment-text h2 {
+    font-size: 40px;
+  }
+
+  .commitment-text p {
+    font-size: 16px;
+  }
+.bg-style {
+  position: absolute;
+  left: 5%;   /* instead of fixed px */
+  top: -26px;
+  height: 360px;
+  z-index: 0;
+}
+}
+
+@media (max-width: 500px) {
+  .main-img {
+    width: 100%;
+    left: 30px;
+    height: 200px;
+  }
+  .bg-style {
+  position: absolute;
+  left: 8%;   /* instead of fixed px */
+  top: -20px;
+  height: 240px;
+  z-index: 0;
+}
+
+
+}

@@ -1,0 +1,67 @@
+.services-container {
+  display: flex;
+  justify-content: center;   /* 🔥 center me la */
+  align-items: center;
+  gap: 30px;                 /* 👈 gap control yahin se */
+  padding: 0 60px;
+  background-color: #FFED00;
+  height: 180px;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-icon {
+  font-size: 50px;
+  /* color: rgb(210, 84, 12); */
+  color: orangered;
+}
+
+.text {
+  display: flex;
+   flex-direction: column;   
+}
+
+.title {
+  font-size: 19px;
+  font-weight: 400;
+   width: 150px;       
+  line-height: 1.2;
+  margin: 0 0 4px 0;
+  color: rgb(8, 7, 11);
+}
+
+/* .subtitle {
+  font-size: 15px;
+  color: #dcbebe;
+  font-size: small;
+  font-weight: 100;
+  margin: 0;
+} */
+
+@media (max-width: 1060px) {
+  .services-container {
+    display: grid;                     /* flex → grid */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    height: auto;    
+    padding: 20px;                 /* 🔥 important */
+  }
+}
+@media (max-width: 500px) {
+  .services-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  
+  }
+
+  .service-card {
+    justify-content: flex-start;
+  }
+}
